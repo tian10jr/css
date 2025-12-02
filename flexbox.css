@@ -1,0 +1,69 @@
+/*
+---FLEX---
+Instructions
+All CSS declarations and media queries in this
+file should strictly target the "flex" div
+and its content in the index.html file.
+
+You're limited to the below stated:
+--------------------------
+Mandatory declaration
+¤ display: flex;                            | Only flex
+--------------------------
+Permitted media queries
+¤ @media screen and (min-width: 768px) {    |
+¤ @media screen and (min-width: 1024px) {   |
+--------------------------
+Permitted properties
+¤ display                                   | Only flex
+¤ flex-basis                                |
+¤ flex-direction                            |
+¤ flex-grow                                 |
+¤ flex-wrap                                 |
+¤ font-weight                               |
+¤ gap                                       |
+¤ justify-content                           |
+¤ order                                     |
+¤ place-content                             |
+--------------------------
+
+Student CSS below the line
+-------------------------- */
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.flex p {
+  font-weight: 800; 
+}
+@media screen and (min-width: 768px) {
+  .flex {
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+  }
+  .flex > * {
+    flex-grow: 1;
+  }
+  .flex *:nth-child(1) {
+    order: 1;
+  }
+  .flex *:nth-child(2) {
+    order: 2;
+  }
+  .flex *:nth-child(3) {
+    order: 3;
+  }
+  .flex *:nth-child(2),
+  .flex *:nth-child(5),
+  .flex *:nth-child(6),
+  .flex *:nth-child(7),
+  .flex *:nth-child(8),
+  .flex *:nth-child(9) {
+    flex-basis: 4; 
+
+  }
+} 
+
